@@ -92,9 +92,10 @@ def col2im2d(unfolded_x, shape, kernel, stride):
 					(c_in, k_h, k_w))
 				cnt_mat[index_m_i, :, row * s_h: row * s_h + k_h, col * s_w: col * s_w + k_w] += 1
 				cnt += 1
+				
 	res /= cnt_mat
 
-		return res
+	return res
 
 
 def pad(x, length, condition, padding_mode='optional', **kwargs):
