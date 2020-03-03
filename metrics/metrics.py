@@ -70,7 +70,6 @@ def _helper(y_true, y_pred, func):
 		return tp, fn
 
 	if func == 'convert':
-		# 将n分类转化成n个二分类
 		# convert n-classification into n binary classifications
 		class_dict = {}
 		for i in list(set(y_true)):
