@@ -31,9 +31,7 @@ net1 = npnn.nn.Sequential(
 		npnn.basic.Softmax()
 	)
 
-
-
-sgd_optimizer = npnn.optim.RMSprop(net1, lr=0.03)
+optimizer1 = npnn.optim.RMSprop(net1, lr=0.03)
 
 x_epoch = []
 train_loss1 = []
@@ -43,7 +41,7 @@ for epoch in range(1000):
 		net1.forward(x_mini[iteration])
 		loss1 = net1.loss(y_mini[iteration])
 		net1.backward()
-		sgd_optimizer.step()
+		optimizer1.step()
 	
 	if epoch % 50 == 0:
 		x_epoch.append(epoch)
